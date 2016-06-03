@@ -6,7 +6,7 @@
 //  Copyright © 2016 Modern Wizard Studio. All rights reserved.
 //
 
-@import Foundation
+#import <Foundation/Foundation.h>
 
 //! Project version number for GoogleBrotli.
 FOUNDATION_EXPORT double GoogleBrotliVersionNumber;
