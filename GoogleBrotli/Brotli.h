@@ -9,11 +9,21 @@
 #ifndef Brotli_h
 #define Brotli_h
 
+#include "decode.h"
+#include "encode.h"
+#include "streams.h"
+
 @interface Brotli : NSObject
+
+typedef enum EncoderMode {
+    unknown = BROTLI_MODE_GENERIC,
+    utf8 = BROTLI_MODE_TEXT,
+    woff2 = BROTLI_MODE_FONT
+} EncoderMode;
 
 + (nullable NSData*) compress:(nonnull NSData*)data;
 
-+ (nullable NSData*) compress:(nonnull NSData*)data quality:(NSUInteger)quality;
++ (nullable NSData*) compress:(nonnull NSData*)data mode:(EncoderMode)mode quality:(int)quality;
 
 + (nullable NSData*) decompress:(nonnull NSData*)data;
 

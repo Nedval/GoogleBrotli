@@ -9,23 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Brotli.h"
 
-#include "decode.h"
-#include "encode.h"
-#include "streams.h"
-
 @implementation Brotli : NSObject
 
 + (NSData*) compress:(NSData*)data {
 
-    return [Brotli compress:data quality:11];
+    return [Brotli compress:data mode:unknown quality:BROTLI_DEFAULT_QUALITY];
 
 }
 
-+ (NSData*) compress:(NSData*)data quality:(NSUInteger)quality {
-
-    brotli::BrotliParams params;
-
-    params.quality = 11;
++ (NSData*) compress:(NSData*)data mode:(EncoderMode)mode quality:(int)quality {
 
     size_t input_size = data.length;
 
@@ -34,8 +26,21 @@
     size_t encoded_size = 0;
 
     uint8_t* encoded_buffer = (uint8_t*)malloc(input_size * sizeof(uint8_t));
-
-    if ( !brotli::BrotliCompressBuffer(params, input_size, input_buffer, &encoded_size, encoded_buffer) ) {
+    
+    BrotliEncoderMode brotli_encoder_mode;
+    
+    switch (mode) {
+        case unknown:
+            brotli_encoder_mode = BROTLI_MODE_GENERIC;
+            break;
+        case utf8:
+            brotli_encoder_mode = BROTLI_MODE_TEXT;
+        case woff2:
+            brotli_encoder_mode = BROTLI_MODE_FONT;
+            break;
+    }
+    
+    if ( !BrotliEncoderCompress(quality, BROTLI_DEFAULT_WINDOW, brotli_encoder_mode, input_size, input_buffer, &encoded_size, encoded_buffer) ) {
 
         return nil;
 

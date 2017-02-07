@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0E3AAAD29F5E852A91DC312D242E7914D1F701F8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "0E3AAAD29F5E852A91DC312D242E7914D1F701F8" : 9223372036854775807,
+    "324F5D91D679041731913229D3F48825A8661055" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "06EAB643-AC80-46E1-B07D-289849CDD3A3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "0E3AAAD29F5E852A91DC312D242E7914D1F701F8" : "GoogleBrotli\/",
+    "324F5D91D679041731913229D3F48825A8661055" : "GoogleBrotli\/brotli\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GoogleBrotli",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GoogleBrotli.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Nedval\/GoogleBrotli.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E3AAAD29F5E852A91DC312D242E7914D1F701F8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/brotli.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "324F5D91D679041731913229D3F48825A8661055"
+    }
+  ]
+}
