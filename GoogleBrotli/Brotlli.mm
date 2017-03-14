@@ -6,6 +6,10 @@
 //  Copyright © 2016 Modern Wizard Studio. All rights reserved.
 //
 
+#include "decode.h"
+#include "encode.h"
+#include "streams.h"
+
 #import <Foundation/Foundation.h>
 #import "Brotli.h"
 
